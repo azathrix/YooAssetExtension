@@ -1,0 +1,24 @@
+{
+    "name": "Azathrix.YooAssetExtension.Runtime",
+    "rootNamespace": "Azathrix.YooAssetExtension",
+    "references": [
+        "UniTask",
+        "Azathrix.Framework.Runtime",
+        "YooAsset"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tuyoogame.yooasset",
+            "expression": "",
+            "define": "YOOASSET_INSTALLED"
+        }
+    ],
+    "noEngineReferences": false
+}

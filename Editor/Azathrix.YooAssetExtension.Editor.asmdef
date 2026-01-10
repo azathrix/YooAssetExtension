@@ -1,0 +1,27 @@
+{
+    "name": "Azathrix.YooAssetExtension.Editor",
+    "rootNamespace": "Azathrix.YooAssetExtension.Editor",
+    "references": [
+        "UniTask",
+        "Azathrix.Framework.Runtime",
+        "Azathrix.YooAssetExtension.Runtime",
+        "Azathrix.EnvInstaller.Editor",
+        "YooAsset.Runtime",
+        "YooAsset.Editor"
+    ],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tuyoogame.yooasset",
+            "expression": "",
+            "define": "YOOASSET_INSTALLED"
+        }
+    ],
+    "noEngineReferences": false
+}
