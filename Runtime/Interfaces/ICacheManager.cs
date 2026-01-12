@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace Azathrix.YooAssetExtension
+namespace Azathrix.YooSystem.Interfaces
 {
     /// <summary>
     /// 缓存信息

@@ -1,13 +1,15 @@
 {
-    "name": "Azathrix.YooAssetExtension.Editor",
-    "rootNamespace": "Azathrix.YooAssetExtension.Editor",
+    "name": "Azathrix.YooSystem.Editor",
+    "rootNamespace": "Azathrix.YooSystem.Editor",
     "references": [
         "UniTask",
         "Azathrix.Framework.Runtime",
-        "Azathrix.YooAssetExtension.Runtime",
+        "Azathrix.YooSystem.Runtime",
         "Azathrix.EnvInstaller.Editor",
-        "YooAsset.Runtime",
-        "YooAsset.Editor"
+        "Azathrix.PackFlow.Editor",
+        "YooAsset",
+        "YooAsset.Editor",
+        "HybridCLR.Editor"
     ],
     "includePlatforms": ["Editor"],
     "excludePlatforms": [],
@@ -21,6 +23,11 @@
             "name": "com.tuyoogame.yooasset",
             "expression": "",
             "define": "YOOASSET_INSTALLED"
+        },
+        {
+            "name": "com.focus-creative-games.hybridclr_unity",
+            "expression": "",
+            "define": "HYBRIDCLR_INSTALLED"
         }
     ],
     "noEngineReferences": false

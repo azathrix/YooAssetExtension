@@ -1,7 +1,7 @@
 #if YOOASSET_INSTALLED
 using Azathrix.Framework.Core.Startup;
 
-namespace Azathrix.YooAssetExtension
+namespace Azathrix.YooSystem.Startup
 {
     /// <summary>
     /// 热更新阶段标记接口

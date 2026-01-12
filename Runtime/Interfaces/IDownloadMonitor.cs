@@ -1,6 +1,6 @@
 using System;
 
-namespace Azathrix.YooAssetExtension
+namespace Azathrix.YooSystem.Interfaces
 {
     /// <summary>
     /// 下载进度数据

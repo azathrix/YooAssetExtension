@@ -1,10 +1,11 @@
 #if YOOASSET_INSTALLED
 using System;
 using System.Collections.Generic;
+using Azathrix.YooSystem.Interfaces;
 using Cysharp.Threading.Tasks;
 using YooAsset;
 
-namespace Azathrix.YooAssetExtension
+namespace Azathrix.YooSystem.Download
 {
     /// <summary>
     /// 下载管理器 - 提供更细粒度的下载控制
@@ -31,7 +32,7 @@ namespace Azathrix.YooAssetExtension
         public async UniTask<bool> DownloadByTagsAsync(string taskId, params string[] tags)
         {
             var downloader = _package.CreateResourceDownloader(tags,
-                _settings.downloadingMaxNum, _settings.failedTryAgain);
+                _settings.DownloadingMaxNum, _settings.FailedTryAgain);
             return await ExecuteDownload(taskId, downloader);
         }
 
@@ -41,7 +42,7 @@ namespace Azathrix.YooAssetExtension
         public async UniTask<bool> DownloadByPathsAsync(string taskId, params string[] paths)
         {
             var downloader = _package.CreateBundleDownloader(paths,
-                _settings.downloadingMaxNum, _settings.failedTryAgain);
+                _settings.DownloadingMaxNum, _settings.FailedTryAgain);
             return await ExecuteDownload(taskId, downloader);
         }
 
@@ -91,24 +92,24 @@ namespace Azathrix.YooAssetExtension
 
             _activeDownloaders.Add(downloader);
 
-            downloader.OnDownloadProgressCallback = (total, current, totalBytes, currentBytes) =>
+            downloader.DownloadUpdateCallback = (data) =>
             {
                 OnTaskProgress?.Invoke(taskId, new DownloadProgress
                 {
-                    TotalCount = total,
-                    CurrentCount = current,
-                    TotalBytes = totalBytes,
-                    CurrentBytes = currentBytes
+                    TotalCount = data.TotalDownloadCount,
+                    CurrentCount = data.CurrentDownloadCount,
+                    TotalBytes = data.TotalDownloadBytes,
+                    CurrentBytes = data.CurrentDownloadBytes
                 });
             };
 
-            downloader.OnDownloadErrorCallback = (fileName, error) =>
+            downloader.DownloadErrorCallback = (data) =>
             {
-                OnTaskError?.Invoke(taskId, $"{fileName}: {error}");
+                OnTaskError?.Invoke(taskId, $"{data.FileName}: {data.ErrorInfo}");
             };
 
             downloader.BeginDownload();
-            await downloader.ToUniTask();
+            await UniTask.WaitUntil(() => downloader.IsDone);
 
             _activeDownloaders.Remove(downloader);
 

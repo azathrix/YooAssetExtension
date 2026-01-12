@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using YooAsset;
 
-namespace Azathrix.YooAssetExtension
+namespace Azathrix.YooSystem.Interfaces
 {
     /// <summary>
     /// 热更新流程状态

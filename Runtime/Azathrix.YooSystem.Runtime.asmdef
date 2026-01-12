@@ -1,6 +1,6 @@
 {
-    "name": "Azathrix.YooAssetExtension.Runtime",
-    "rootNamespace": "Azathrix.YooAssetExtension",
+    "name": "Azathrix.YooSystem.Runtime",
+    "rootNamespace": "Azathrix.YooSystem",
     "references": [
         "UniTask",
         "Azathrix.Framework.Runtime",
