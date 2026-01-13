@@ -1,9 +1,9 @@
-{
+﻿{
     "name": "com.azathrix.yoo-system",
     "displayName": "Yoo System",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "unity": "6000.3",
-    "description": "对YooAsset的集成和支持,可以方便安装和配置YooAsset的环境,以及打包的接入。",
+    "description": "\u5bf9YooAsset\u7684\u96c6\u6210\u548c\u652f\u6301,\u53ef\u4ee5\u65b9\u4fbf\u5b89\u88c5\u548c\u914d\u7f6eYooAsset\u7684\u73af\u5883,\u4ee5\u53ca\u6253\u5305\u7684\u63a5\u5165\u3002",
     "license": "MIT",
     "author": {
         "name": "Azathrix"
@@ -11,6 +11,6 @@
     "dependencies": {
         "com.azathrix.framework": "0.0.5",
         "com.azathrix.unitask": "2.5.10",
-        "com.azathrix.pack-flow": "1.0.0"
+        "com.azathrix.pack-flow": "1.0.1"
     }
 }
