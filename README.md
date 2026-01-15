@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/AzathrixDev"><img src="https://img.shields.io/badge/GitHub-Azathrix-black.svg" alt="GitHub"></a>
+  <a href="https://github.com/azathrix/YooSystem"><img src="https://img.shields.io/badge/GitHub-Azathrix-black.svg" alt="GitHub"></a>
   <a href="https://www.npmjs.com/package/com.azathrix.yoo-system"><img src="https://img.shields.io/npm/v/com.azathrix.yoo-system.svg" alt="npm"></a>
   <a href="#license"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://unity.com/"><img src="https://img.shields.io/badge/Unity-6000.3+-black.svg" alt="Unity"></a>
@@ -45,7 +45,7 @@
 
 1. 打开 `Window > Package Manager`
 2. 点击 `+` > `Add package from git URL...`
-3. 输入：`https://github.com/AzathrixDev/com.azathrix.yoo-system.git#latest`
+3. 输入：`https://github.com/azathrix/YooSystem.git#latest`
 
 > ⚠️ Git 方式无法自动解析依赖，需要先手动安装：
 > - Azathrix Framework
