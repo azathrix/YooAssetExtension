@@ -1,12 +1,11 @@
 #if YOOASSET_INSTALLED
 using System.Collections.Generic;
 using System.Linq;
-using Editor.Core;
-using Editor.UI;
+using Azathrix.PackFlow.Editor.Core;
+using Azathrix.PackFlow.Editor.UI;
 using UnityEditor;
 using UnityEngine;
 using YooAsset.Editor;
-using PackFlowContext = Editor.Core.BuildContext;
 
 namespace Azathrix.YooSystem.Editor.Editor.Build
 {
@@ -126,7 +125,7 @@ namespace Azathrix.YooSystem.Editor.Editor.Build
         /// <summary>
         /// 获取需要上传的目录列表
         /// </summary>
-        public override IReadOnlyList<string> GetUploadDirectories(PackFlowContext context)
+        public override IReadOnlyList<string> GetUploadDirectories(PackFlowBuildContext context)
         {
             var dirs = new List<string>();
             var outputRoot = Settings.GetBuildOutputRoot();

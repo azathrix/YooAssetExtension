@@ -83,7 +83,7 @@ namespace Azathrix.YooSystem
     /// YooAsset系统配置
     /// </summary>
     [SettingsPath("YooAssetSettings")]
-    [ShowSetting("YooAsset配置")]
+    [ShowSetting("YooSystem")]
     public class YooAssetSettings : SettingsBase<YooAssetSettings>
     {
         [Header("Profile 配置")] [Tooltip("配置组列表（类似 Addressable 的 Profile）")]

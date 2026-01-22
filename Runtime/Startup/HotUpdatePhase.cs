@@ -1,6 +1,6 @@
 #if YOOASSET_INSTALLED
 using System;
-using Azathrix.Framework.Core.Startup;
+using Azathrix.Framework.Core.Launcher;
 using Azathrix.Framework.Tools;
 using Azathrix.YooSystem.Interfaces;
 using Cysharp.Threading.Tasks;
@@ -19,7 +19,7 @@ namespace Azathrix.YooSystem.Startup
         public HotUpdateState State { get; private set; }
         public string ErrorMessage { get; private set; }
 
-        public async UniTask ExecuteAsync(PhaseContext context)
+        public async UniTask ExecuteAsync(LauncherContext context)
         {
             var settings = YooAssetSettings.Instance;
             YooService.Initialize(settings);

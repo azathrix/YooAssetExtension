@@ -1,15 +1,15 @@
 #if YOOASSET_INSTALLED
 using System.Collections.Generic;
 using System.IO;
-using Editor.Attributes;
-using Editor.Interfaces;
+using Azathrix.PackFlow.Editor.Attributes;
+using Azathrix.PackFlow.Editor.Core;
+using Azathrix.PackFlow.Editor.Interfaces;
 using UnityEditor;
 using UnityEngine;
 using YooAsset;
 using YooAsset.Editor;
-using PackFlowContext = Editor.Core.BuildContext;
-using PackFlowPipeline = Editor.Interfaces.IBuildPipeline;
 using YooBuildResult = YooAsset.Editor.BuildResult;
+using PackFlowPipeline = Azathrix.PackFlow.Editor.Interfaces.IBuildPipeline;
 
 namespace Azathrix.YooSystem.Editor.Editor.Build.Steps
 {
@@ -99,7 +99,7 @@ namespace Azathrix.YooSystem.Editor.Editor.Build.Steps
                 Settings.Save();
         }
 
-        public bool Execute(PackFlowContext context)
+        public bool Execute(PackFlowBuildContext context)
         {
             var selectedPackages = _pipeline.GetSelectedPackages();
             if (selectedPackages.Count == 0)
