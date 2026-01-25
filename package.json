@@ -1,7 +1,7 @@
 ﻿{
     "name": "com.azathrix.yoo-system",
     "displayName": "Yoo System",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "unity": "6000.3",
     "description": "\u5bf9YooAsset\u7684\u96c6\u6210\u548c\u652f\u6301,\u53ef\u4ee5\u65b9\u4fbf\u5b89\u88c5\u548c\u914d\u7f6eYooAsset\u7684\u73af\u5883,\u4ee5\u53ca\u6253\u5305\u7684\u63a5\u5165\u3002",
     "license": "MIT",
@@ -9,19 +9,20 @@
         "name": "Azathrix"
     },
     "dependencies": {
-        "com.azathrix.framework": "0.0.5",
+        "com.azathrix.framework": "0.0.8",
         "com.azathrix.unitask": "2.5.10",
         "com.azathrix.pack-flow": "1.0.1"
     },
     "samples": [
         {
             "displayName": "Tests",
-            "description": "运行时的流程测试",
+            "description": "\u8fd0\u884c\u65f6\u7684\u6d41\u7a0b\u6d4b\u8bd5",
             "path": "Tests~"
         },
         {
             "displayName": "Samples",
-            "description": "挂载到GameObject上Demo",
+            "description": "\u6302\u8f7d\u5230GameObject\u4e0aDemo",
             "path": "Samples~"
-        }]
+        }
+    ]
 }
